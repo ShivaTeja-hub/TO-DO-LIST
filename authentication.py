@@ -58,11 +58,7 @@ def sign_in(name,password):
 
     
 
-def get_all():
-    
-    data=cursor.execute('select * from to_do')
-    for i in data:
-        print(i)
+
 
 """table='create table auth_db(token varchar(300),user_name varchar(100), primary key(user_name))'
 cursor.execute(table)
@@ -83,8 +79,7 @@ if __name__ == '__main__':
             name = input("enter your name please:\n ")
             password = input("your password:\n ")
             jwt_authentication(name,password)
-        elif k==3:
-            get_all()
+
         else:
             print("wrong input please try again\n")
             break
